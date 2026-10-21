@@ -20,7 +20,7 @@ jobs:
         with:
           app-id: ${{ secrets.PRIVATE_APP_ID }}
           private-key: ${{ secrets.PRIVATE_APP_PRIVATE_KEY }}
-          owner: <votre_nom_d_utilisateur>
+          owner: 237ytreza
           repositories: vpn-files-generator-workflows
 
       - name: Cloner le dépôt privé
@@ -28,7 +28,7 @@ jobs:
           APP_TOKEN: ${{ steps.app_token.outputs.token }}
         run: |
           git clone --depth 1 \
-            "https://x-access-token:${APP_TOKEN}@github.com/<votre_nom_d_utilisateur>/vpn-files-generator-workflows.git" work
+            "https://x-access-token:${APP_TOKEN}@github.com/237ytreza/vpn-files-generator-workflows.git" work
 
       - name: Installer Python 3.11
         uses: actions/setup-python@v5
